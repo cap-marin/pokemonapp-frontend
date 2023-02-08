@@ -29,14 +29,16 @@ function App() {
             md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium
           "
             >
-              <li>
+              
+              {user ? (
+                <>
+                <li>
                 <Link
                   to="/"
                   className="block rounded py-2 pr-4 pl-3 text-white"
                   aria-current="page"
                 >Home</Link>
               </li>
-              {user ? (
                 <li>
                   <button
                     onClick={logout}
@@ -44,6 +46,7 @@ function App() {
                     aria-current="page"
                   >Cerrar sesión</button>
                 </li>
+                </>
               ) : (
                 <>
                   <li>
